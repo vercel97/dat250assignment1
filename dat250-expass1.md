@@ -131,7 +131,7 @@ and listed the locally availeble images:
 ```
 podman images
 ```
-![Locally availeble images](bilder/podman-images.png)
+![Locally availeble images](bilder/docker-mages.png)
 I then logged on to my dockerhub account and got created a new access token that I could use later when uploading the image to a repository in dockerhub. 
 I ran the following command, with my dockerusername and using the token recently created when asked for a password:
 ```
