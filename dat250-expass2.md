@@ -34,6 +34,18 @@ Some changes in the persistence.xml file might be needed.
  - Viewing the H2 database in an browser: I was unable to view the database in the browser. What I did to try to resolve it:
      - Changing the code for the H2-dependency in the pom.xml file
      - Changing the JDBC URL in the persistence.xml file
+  
+To try to view it, I ran the main method and the the following command:
+![terminal command](bilder/innlevering2/H2-jar.png)
+
+Which resulted in the following window opening in my browser:
+![H2 console](bilder/innlevering2/H2database.png)
+
+I filled in the URL and let the username be "sa" and the password empty, but got an error that the database was not fond.
+I have tried to change the URL to make sure that the url was right and to check that no other prosesses are running. Also I have made sure that the database is set to not close on exit:
+```
+<property name="hibernate.connection.url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE"/>
+```
 
 I used the sql that got logged to the console to see what tables that got created, and used prints to see the objects that got persisted into the tables. 
 
